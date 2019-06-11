@@ -81,3 +81,4 @@ patient = s(s_slash(max(find(s_slash-27<0)))+1:union(regexp(s,'F_'),regexp(s,'M_
 file_info_ICVOI.fname = [patient,'_ICVOI.img'];
 file_info_ICVOI.descrip = 'spm - algebra';
 expression = ['i1/',num2str(ave_inensity)];
+Vo = spm_imcalc(file_info,file_info_ICVOI,expression);
