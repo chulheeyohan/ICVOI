@@ -1,3 +1,15 @@
+%
+%w2ICVOI.m
+%
+%ver. June 11, 2019
+%
+%input: SPM-normalized w-image automatically grabbed from the last file of the "ls" command
+%process: 
+%1. fit ellipses on VINCI Tx034 and Cor047 planes
+%2. calculate average intensity of voxels within an ellipsoid
+%output: patient_ICVOI.img
+%
+
 %Image Import
 %file_info= spm_vol('w5104-2019.5.30.11.10_rsl.img');
 file_list = ls;
