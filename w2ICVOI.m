@@ -1,6 +1,6 @@
 %Image Import
 %file_info= spm_vol('w5104-2019.5.30.11.10_rsl.img');
-file_info = uigetfile('w*.img');
+file_info = spm_vol(uigetfile('w*.img'));
 imge_file_data = spm_read_vols(file_info);
 temp = permute(imge_file_data,[2 1 3]);
 [Ny Nx Nz] = size(temp);%[Ny, Nx, Nz] = [95, 79, 69]
