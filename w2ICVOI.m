@@ -13,7 +13,7 @@
 %Image Import
 %file_info= spm_vol('w5104-2019.5.30.11.10_rsl.img');
 file_list = ls;
-w_file = ls(end,:)
+w_file = file_list(end,:)
 %file_info = spm_vol(uigetfile('w*.img'));
 file_info = spm_vol(w_file);
 imge_file_data = spm_read_vols(file_info);
