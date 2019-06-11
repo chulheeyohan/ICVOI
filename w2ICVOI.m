@@ -70,3 +70,14 @@ inside = find((X-Xshft).^2/[(Xx-1)/2]^2 + (Y-Yshft).^2/[(Yx-1)/2]^2 + (Z-Zshft).
 ave_intensity = mean(temp_1D(inside))
 std_intensity = std(temp_1D(inside))
 num_vxl = length(inside)
+
+%
+% obtain and save the ICVOI image
+%
+s = pwd;
+file_info_ICVOI = file_info;
+s_slash = regexp(s,'\');
+patient = s(s_slash(max(find(s_slash-27<0)))+1:union(regexp(s,'F_'),regexp(s,'M_')));
+file_info_ICVOI.fname = [patient,'_ICVOI.img'];
+file_info_ICVOI.descrip = 'spm - algebra';
+expression = ['i1/',num2str(ave_inensity)];
