@@ -179,10 +179,10 @@ num_vxl = length(inside)
 s = pwd;
 file_info_ICVOI = file_info;
 s_slash = regexp(s,'\');
-patient = s(...
+person = s(...
   s_slash(max(find(s_slash-union(regexp(s,'F_'),regexp(s,'M_'))<0)))+1:...
   union(regexp(s,'F_'),regexp(s,'M_')));
-file_info_ICVOI.fname = [patient,'_ICVOI.img'];
+file_info_ICVOI.fname = [person,'_ICVOI.img'];
 file_info_ICVOI.descrip = 'spm - algebra';
 expression = ['i1/',num2str(ave_intensity)];
 Vo = spm_imcalc(file_info,file_info_ICVOI,expression);
